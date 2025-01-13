@@ -20,14 +20,14 @@ class UserController
                 'error' => true,
                 'success' => false,
                 'message' => $userService['error']
-            ], 400);
+            ], 401);
         }
 
         $response::json([
             'error' => false,
             'success' => true,
             'jwt' => $userService
-        ], 201);
+        ], 200);
     }
 
 }
